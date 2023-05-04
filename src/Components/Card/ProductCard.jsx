@@ -15,9 +15,9 @@ export default function ProductCard({product}){
   }
 
   return(
-    <div className=" rounded-lg m-4 p-2 grid grid-flow-col-dense gap-2 max-w-sm shadow bg-neutral-100">
+    <div className=" rounded-lg p-2 grid grid-flow-col-dense gap-2 border-solid border-2 ">
       <div className="flex flex-col justify-between">
-        <div className="bg-lime-100 w-24 h-24 bg-neutral-400"></div>
+        <div className="bg-lime-100 w-24 h-24 bg-neutral-400 self-center"></div>
         <div className="text-center bg-green-100 text-green-900 rounded p-1 mt-1 text-xs font-bold">{product.category.label}</div> 
       </div>
       <div className="grid justify-items-stretch col-span-4">
@@ -25,8 +25,6 @@ export default function ProductCard({product}){
         <p className='text-xs'>{product.description}</p>
         {price}
       </div>
-
-      
     </div>
   )
 }
