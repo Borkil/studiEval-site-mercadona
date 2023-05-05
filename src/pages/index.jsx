@@ -13,9 +13,17 @@ export async function getStaticProps() {
 }
 
 export default function Home({listProducts}) {
+  const listDealProducts = []
+  
+  listProducts.forEach(product => {
+    if(product.isDeal){
+      listDealProducts.push(product)
+    }
+  })
+
   return (
     <main>
-      <SectionShowCard products={listProducts}/>
+      <SectionShowCard products={listDealProducts}/>
     </main>
   )
 }
