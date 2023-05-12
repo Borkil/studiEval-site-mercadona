@@ -1,4 +1,4 @@
-import SectionShowCard from "@/components/SectionShowCard.jsx"
+import SectionShowCard from "@/Components/SectionShowCard.jsx"
 
 export default function Home({listProducts}) {
   // const listDealProducts = []
