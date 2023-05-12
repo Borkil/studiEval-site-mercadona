@@ -18,10 +18,9 @@ export default function Home({listProducts}) {
 }
 
 export async function getStaticProps() {
-  // const res = await fetch('http://api-mercadona.test/api/product')
-  const res = await fetch('https://api-mercadona.herokuapp.com/api/product')
+ 
+  const res = await fetch(process.env.API_URL + '/product')
   const listProducts = await res.json()
-  
   return {
     props: {
       listProducts,
