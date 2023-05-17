@@ -6,12 +6,10 @@ export default function Home({ listProducts, listCategory }) {
   const listDealProducts = [];
 
   listProducts.forEach((product) => {
-    if (product.isDeal) {
-      if (product.category.label === filter) {
-        listDealProducts.push(product);
-      } else if (filter === "all") {
-        listDealProducts.push(product);
-      }
+    if (product.category.label === filter) {
+      listDealProducts.push(product);
+    } else if (filter === "all") {
+      listDealProducts.push(product);
     }
   });
 
