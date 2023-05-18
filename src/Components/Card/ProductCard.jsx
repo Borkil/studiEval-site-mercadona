@@ -15,7 +15,7 @@ export default function ProductCard({product}){
   const image = []
 
   if(product.image){
-    getDownloadURL(ref(storage, `images/${product.image}`))
+    getDownloadURL(ref(storage, `${process.env.NEXT_PUBLIC_FIREBASE_PATH}${product.image}`))
       .then((url)=>{
           setUrl(url)
       })
