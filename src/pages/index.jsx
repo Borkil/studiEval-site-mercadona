@@ -18,18 +18,19 @@ export default function Home({ listProducts, listCategory }) {
   return (
     <main>
       <SectionShowCard products={listDealProducts} category={filter} />
-      <ul>
-        <li onClick={() => setFilter("all")}>all</li>
-        {listCategory.map((category) => (
-          <li
-            className="bg-green-200"
-            key={"non" + category.id}
-            onClick={() => setFilter(category.label)}
-          >
-            {category.label}
-          </li>
-        ))}
-      </ul>
+      <div className="relative">
+        <ul className="fixed bottom-0 right-0 bg-green-200">
+          <li onClick={() => setFilter("all")}>all</li>
+          {listCategory.map((category) => (
+            <li
+              key={"non" + category.id}
+              onClick={() => setFilter(category.label)}
+            >
+              {category.label}
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }

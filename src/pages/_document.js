@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="fr">
       <Head />
-      <body >
+      <body className='container max-w-6xl'>
           <Header/>
           <Main />
           <NextScript />
