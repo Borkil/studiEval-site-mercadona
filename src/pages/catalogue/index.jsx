@@ -24,7 +24,7 @@ export default function Home({ listProducts, listCategory }) {
               key={"non" + category.id}
               onClick={() => setFilter(category.label)}
             >
-              {category.label}
+               {category.label}
             </li>
           ))}
         </ul>
