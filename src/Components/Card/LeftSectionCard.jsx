@@ -11,7 +11,8 @@ export default function LeftSectionCard({product}) {
   const app = initializeApp(firebaseConfig);
   const storage = getStorage();
   const [url, setUrl] = useState();
-
+  const image = []
+  
   if (product.image) {
     getDownloadURL(
       ref(storage, `${process.env.NEXT_PUBLIC_FIREBASE_PATH}${product.image}`)
@@ -23,6 +24,7 @@ export default function LeftSectionCard({product}) {
       <div className="bg-lime-100 bg-neutral-400 self-center"></div>
     );
   }
+ 
 
   return (
     <div className="flex flex-col justify-between w-24 me-2" >
