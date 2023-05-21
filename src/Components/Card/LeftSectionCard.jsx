@@ -2,7 +2,7 @@ import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "@/firebase/firebase.config.js";
 import { useState } from "react";
-import Image from "next/image.js";
+import Image from "next/image";
 import ProductCardCategory from "./ProductCardCategory.jsx";
 
 
